@@ -1,0 +1,14 @@
+##Hệ Điều Hành linux
+
+**Cấu hình DHCP**
+- DHCP Là sự quản lý tự động địa chỉ IP bởi việc tự động hóa việc cấp phát thông tin cấu hình IP cho clients
+- Cấu hình dhcp chia làm 2 dạng: DHCP và static (tự động và cấu hình tay).
+- Câu lệnh để cấu hình là : "sudo vi /etc/network/interfaces"
+- Sẽ hiện ra như hình sau :
+![image](http://i.imgur.com/wIPMTN5.png)
+- Trong đó : eth0 tới eth2 là cấu hình tự động, còn eht3 là cấu hình tay
+- Sau khi cài đặt dải địa chỉ xong, ta dùng câu lệnh :"sudo ifup ehtX" để update dải địa chỉ ta vừa cấu hình xong
+- Sau mỗi lần chỉnh sửa chúng ta sẽ phải dùng câu lệnh : "sudo ifdown ethX" rồi mới up lại.
+```sh
+- Chú ý: sau khi update dhcp, lưu lại sẽ xảy ra 1 số lỗi nhỏ ko thể lưu được  nếu chúng ra dùng ":x" để lưu. Chúng ta sẽ sùng ":x!" để lưu lại
+Còn nếu không được nữa thì e cũng không biết. "!" để ép quyền.
